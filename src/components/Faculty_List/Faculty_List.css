@@ -1,4 +1,4 @@
-/* Styles for the container */
+
 * {
   margin: 0;
   padding: 0;
@@ -16,7 +16,6 @@
 .list-container {
   padding-left: 10%;
 }
-/* Styles for the circular progress bar */
 .progress-bar-circular {
   height: 2rem;
   margin-bottom: 6.5%;
