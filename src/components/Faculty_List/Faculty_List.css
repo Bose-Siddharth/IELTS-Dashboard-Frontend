@@ -1,0 +1,339 @@
+/* Styles for the container */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.dueDatesList {
+    margin-bottom: 12%;
+    font-weight: normal;
+  }
+.list-container {
+    display: flex;
+    margin: 3%;
+    position: relative;
+  }
+.list-container {
+  padding-left: 10%;
+}
+/* Styles for the circular progress bar */
+.progress-bar-circular {
+  height: 2rem;
+  margin-bottom: 6.5%;
+  display: flex;
+  justify-content: start;
+  position: relative;
+  right: 30%;
+  mix-blend-mode: color-burn;
+}
+
+.listPms {
+}
+.hr-line {
+  position: absolute;
+  width: 53.5%;
+  top: 12%;
+}
+.nameWidth {
+  margin-bottom: 6%;
+  font-weight: 600;
+}
+.container {
+  padding: 3%;
+  padding-left: 10%;
+  width: 50%;
+  display: flex;
+  align-items: middle;
+  padding-right: 30%;
+}
+@media (max-width: 1127px) {
+    .container {
+        /* display: flex;
+        flex-direction: column; */
+        padding-left: 13%;
+        gap: 30px;
+        padding-left: 38px;
+        margin-bottom: 30px;
+    }
+  .list-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+@media (max-width: 1200px) {
+  .list-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin: -1%;
+  }
+  .hr-line {
+    width: 100%;
+  }
+  .Status {
+    width: 60px;
+    font-size: 0.5rem;
+  }
+  .statusWidth {
+    padding-right: 10%;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+  .nameWidth {
+    margin-bottom: 20%;
+  }
+  .listPms {
+    display: flex;
+    flex-direction: column;
+  }
+  .listPmsHead {
+    margin-bottom: 11%;
+  }
+  .DateHead {
+    margin-left: 3px;
+  }
+  .listDates {
+    width: 95px;
+    margin-left: -8px;
+    margin-top: 36px;
+}
+.statusList {
+    margin-left: 24px;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 23px;
+}
+.progressList {
+    padding-left: 11px;
+    margin-top: 35px;
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+    align-items: center;
+    justify-content: center;
+}
+  .statusHead {
+    margin-left: 50px;
+  }
+  .hr-line {
+    position: absolute;
+    top: 20%;
+  }
+  .progress-bar-circular {
+    height: 2rem;
+    margin-bottom: 6.5%;
+    display: flex;
+    justify-content: start;
+    position: relative;
+    right: 30%;
+    mix-blend-mode: color-burn;
+    margin-bottom: 1px;
+  }
+}
+
+@media (max-width: 700px) {
+  .list-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+  .hr-line {
+    width: 100%;
+  }
+  .Status {
+    width: 60px;
+    font-size: 0.5rem;
+  }
+  .statusWidth {
+    padding-right: 23%;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+  .nameWidth {
+    margin-bottom: 25%;
+  }
+  .nameListElement {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+  .listPms {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+  .DateHead {
+    margin-left: 3px;
+    width: 100px;
+  }
+  .listDates {
+    width: 131px;
+    margin-left: 3px;
+  }
+  .statusList {
+    margin-left: 35px;
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 27px;
+  }
+  .progressList {
+    padding-left: 11px;
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+  .statusHead {
+    margin-left: 50px;
+  }
+  .hr-line {
+    position: absolute;
+    top: 20%;
+  }
+  .progress-bar-circular {
+    height: 2rem;
+    margin-bottom: 6.5%;
+    display: flex;
+    justify-content: start;
+    position: relative;
+    right: 30%;
+    mix-blend-mode: color-burn;
+    margin-bottom: 1px;
+  }
+}
+
+@media (max-width: 500px) {
+    .container {
+        display: flex;
+        flex-direction: column;
+        padding-left: 13%;
+        gap: 30px;
+        padding-left: 38px;
+        margin-bottom: 30px;
+    }
+  .list-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-left: 6%;
+  }
+  .hr-line {
+    width: 100%;
+
+  }
+  .Status {
+    width: 60px;
+    font-size: 0.5rem;
+  }
+  .statusWidth {
+    padding-right: 23%;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+  .nameWidth {
+    margin-bottom: 29%;
+    font-size: 0.8rem;
+  }
+  .nameListElement {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    font-size: 0.6rem;
+  }
+  .listPmsHead {
+    margin-bottom: 11%;
+    font-size: 0.7rem;
+  }
+  .listPms {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    font-size: 0.6rem;
+}
+.DateHead {
+    margin-left: 3px;
+    width: 100px;
+    font-size: 0.8rem;
+    padding-bottom: 14%;
+}
+.listDates {
+    width: 131px;
+    margin-left: 3px;
+    margin-top: 21px;
+    font-size: 0.6rem;
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+.dueDatesList{
+    margin-top: -4%;
+}
+  /* .listDates {
+    width: 131px;
+    margin-left: 7px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  } */
+  .statusList {
+    margin-left: 23px;
+    margin-top: 1px;
+    display: flex;
+    flex-direction: column;
+    gap: 13px;
+}
+  .progressList {
+    padding-left: 11px;
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+  }
+  .statusHead {
+    margin-left: 24px;
+    font-size: 0.7rem;
+  }
+      .hr-line {
+        position: absolute;
+        top: 13%;
+    }
+  .progress-bar-circular {
+    height: 2rem;
+    margin-bottom: 6.5%;
+    display: flex;
+    justify-content: start;
+    position: relative;
+    right: 30%;
+    mix-blend-mode: color-burn;
+    margin-bottom: 1px;
+  }
+  .progressBody{
+    visibility: hidden;
+  }
+}
+
+@media (max-width: 350px) {
+    .container {
+        display: flex;
+        flex-direction: column;
+        padding-left: 13%;
+        gap: 29px;
+        padding-left: 33px;
+    }
+}
+
+@media(max-width: 767px) {
+    .progressHead{
+        margin-left: -17px;
+    }
+    .dueDatesList{
+        margin-bottom: 7%;
+    }
+}

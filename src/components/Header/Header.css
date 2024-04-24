@@ -1,0 +1,47 @@
+.HeadArea{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 5px;
+}
+@media (max-width:739px) {
+    .HeadArea{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+    .search{
+        width: 100%;
+    }
+    .prof{
+        width: 50%;
+    }
+}
+@media (max-width:480px) {
+    .HeadaArea{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+    .search{
+        width: 100%;
+    }
+    .prof{
+        width: 60%;
+    }
+}
+@media (max-width:650px){
+    .profile{
+        width:100%;
+    }
+    .prof{
+        display: flex ;
+        justify-content: space-between;
+    }
+    .searchBar{
+        width: 100%;
+    }
+}
