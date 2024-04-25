@@ -1,44 +1,28 @@
-import React from 'react'
-import { CircularProgressbar, buildStyles } from 'react-circular-progressbar';
+import React from 'react';
+import { CircularProgressbar } from 'react-circular-progressbar';
+import 'react-circular-progressbar/dist/styles.css'; // Import the styles for the progress bar
 
-const CircleProgress = ({percentage ,color1, color2}) => {
+const CircleProgress = ({ percentage, color1, color2 }) => {
   return (
-    <div>
-      
+    <div style={{ width: '150px', height: '150px' }}>
       <CircularProgressbar
-             
-             value={percentage}
-          text={`${percentage}%`}
-                  styles={{
-              root: {
-                     width: '150px', // Adjust the width to make the progress bar smaller
-                       height: '150px', // Adjust the height to make the progress bar smaller
-                     },
-             path: {
-             stroke: color1,
-             // strokeLinecap: 'butt',
-             transition: 'stroke-dashoffset 0.5s ease 0s',
-             transform: 'rotate(0.25turn)',
-             transformOrigin: 'center center',
-             },
-             trail: {
-             stroke: color2,
-             strokeLinecap: 'butt',
-             transform: 'rotate(0.25turn)',
-             transformOrigin: 'center center',
-             },
-             text: {
-             fill: '#000',
-             fontSize: '20px', // Adjust the font size to make the text smaller
-             },
-             background: {
-             fill: '#000000',
-             },
-         }}
-             />
-
+        value={percentage}
+        text={`${percentage}%`}
+        styles={{
+          root: { width: '100%', height: '100%' },
+          path: { stroke: color1 },
+          trail: { stroke: color2 },
+          text: {
+            fill: '#000',
+            fontSize: '20px',
+            dominantBaseline: 'middle', // Vertical alignment
+            textAnchor: 'middle', // Horizontal alignment
+          },
+          background: { fill: '#000000' },
+        }}
+      />
     </div>
-  )
-}
+  );
+};
 
-export default CircleProgress
+export default CircleProgress;
