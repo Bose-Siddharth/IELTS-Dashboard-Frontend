@@ -18,7 +18,7 @@ const CircleProgress = ({ percentage, color1, color2 }) => {
             dominantBaseline: 'middle', // Vertical alignment
             textAnchor: 'middle', // Horizontal alignment
           },
-          background: { fill: '#000000' },
+          // background: { fill: '#000000' },
         }}
       />
     </div>
