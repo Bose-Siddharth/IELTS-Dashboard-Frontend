@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
+import React, { useState,useNavigate } from 'react';
 
-const Buttons = ({ img, heading, isOpen,img2 }) => {
+const Buttons = ({ img, heading, isOpen,img2,onClick }) => {
   const [select, setSelect] = useState(false);
 
   const handleMouseEnter = () => {
@@ -10,15 +10,18 @@ const Buttons = ({ img, heading, isOpen,img2 }) => {
   const handleMouseLeave = () => {
     setSelect(false);
   };
+  
 
   return (
     <div
       className={`flex gap-2 pl-3 py-3 ${select && 'bg-[#FFFFFF] rounded-full '}`}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
+      onClick={onClick} 
+     
     >
       
-      {select?<img src={img2} className={`object-contain ${select && 'bg-transparent rounded-full '}`} />
+      {select?<img src={img2} className={`object-contain ${select && 'bg-transparent rounded-full '}`}/>
       : <img src={img} className={`object-contain ${select && 'bg-transparent rounded-full '}`} />}
 
       <div className={`${!isOpen && 'opacity-0'} pl-4  text-lg ${select ? 'text-[#001AA1] font-semibold' :'text-[#FFFFFF]'}`}>

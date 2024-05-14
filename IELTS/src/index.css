@@ -1,3 +1,18 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root {
+    --dynamic-blue-100: #001AA1;
+    --dynamic-blue-200: #4339F2;
+    --dynamic-blue-300: #DAD7FE;
+    --dynamic-red-100: #FFE5D3;
+    --dynamic-red-200: #FF3A29;
+    --dynamic-red-300: #E65F2B;
+    --dynamic-green-200: #34B53A;
+    --dynamic-green-100: #E2FBD7;
+    --dynamic-green-300: #CCF8FE;
+    --dynamic-green-400: #1A932E;
+    --dynamic-yellow-100: #E5AE21;
+
+  }

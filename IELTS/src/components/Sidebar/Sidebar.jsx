@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import IELTS from '../../assets/IELTS.png'
 import People from "../../assets/people.png"
 import Settings from "../../assets/settings.png"
@@ -8,9 +8,8 @@ import Buttons from './Buttons'
 import Dashboard2 from "../../assets/Dashboard2.png"
 import Faculty2 from "../../assets/Faculty_2.png"
 
-const Sidebar = ({isOpen}) => {
+const Sidebar = ({isOpen, toggleSidebar}) => {
   const role='isAdmin';
-
   return (
     <div className={`${isOpen ?'w-[250px]' : 'w-[60px]'} h-full  bg-[#001AA1]  fixed overflow-hidden `}>
       <div className='w-[80%] mx-auto pt-10 flex flex-col gap-16'>
@@ -22,18 +21,16 @@ const Sidebar = ({isOpen}) => {
 
             {role==='isAdmin'?
                   <div className='flex flex-col gap-16'>
-                 <Buttons heading={'Add Faculty'} img={add} isOpen={isOpen} img2={Dashboard2} 
-
-                 />
-                 <Buttons heading={'Dashboard'} img={Dashboard} isOpen={isOpen} img2={Dashboard2}/>
-                 <Buttons heading={'Faculty'} img={People} isOpen={isOpen} img2={Faculty2}/>
-                <Buttons heading={'Menu Settings'} img={Settings} isOpen={isOpen} img2={Dashboard2}/>
+                 <Buttons heading={'Add Faculty'} img={add} isOpen={isOpen} img2={Dashboard2}  onClick={toggleSidebar} />
+                 <Buttons heading={'Dashboard'} img={Dashboard} isOpen={isOpen} img2={Dashboard2}  onClick={toggleSidebar}/>
+                 <Buttons heading={'Faculty'} img={People} isOpen={isOpen} img2={Faculty2}  onClick={toggleSidebar}/>
+                <Buttons heading={'Menu Settings'} img={Settings} isOpen={isOpen} img2={Dashboard2}  onClick={toggleSidebar}/>
                   </div>
                   :   <div className='flex flex-col gap-16'>
                  {/* <Buttons heading={'Add Faculty'} img={add} isOpen={isOpen}/> */}
-                 <Buttons heading={'Dashboard'} img={Dashboard} isOpen={isOpen}/>
-                 <Buttons heading={'Faculty'} img={People} isOpen={isOpen}/>
-                <Buttons heading={'Menu Settings'} img={Settings} isOpen={isOpen}/>
+                 <Buttons heading={'Dashboard'} img={Dashboard} isOpen={isOpen}  onClick={toggleSidebar}/>
+                 <Buttons heading={'Faculty'} img={People} isOpen={isOpen}  onClick={toggleSidebar}/>
+                <Buttons heading={'Menu Settings'} img={Settings} isOpen={isOpen}  onClick={toggleSidebar}/>
                   </div>
             }
             

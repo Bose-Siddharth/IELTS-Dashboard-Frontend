@@ -2,8 +2,34 @@ import React from "react";
 import ProfilePhoto from "../../assets/Images/ProfilePic.jpg";
 import { ChevronDownIcon } from "@heroicons/react/20/solid";
 import './Header.css'
+import { useState,useRef,useEffect } from "react";
 
 export default function Header({Heading,isOpen}) {
+
+  const [showButtons, setShowButtons] = useState(false);
+  const buttonsContainerRef = useRef(null);
+
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (buttonsContainerRef.current && !buttonsContainerRef.current.contains(event.target)) {
+        setShowButtons(false);
+      }
+    };
+
+    if (showButtons) {
+      window.addEventListener('click', handleClickOutside);
+    }
+
+    return () => {
+      window.removeEventListener('click', handleClickOutside);
+    };
+  }, [showButtons]);
+
+  const handleIconClick = (event) => {
+    // Stop propagation to prevent window click event immediately after
+    event.stopPropagation();
+    setShowButtons(!showButtons);
+  };
 
   return (
     <>
@@ -52,8 +78,28 @@ export default function Header({Heading,isOpen}) {
               <ChevronDownIcon
                 className="-mr-1 h-5 w-5 text-gray-400"
                 aria-hidden="true"
+                onClick={handleIconClick}
               />
             </div>
+
+            {showButtons && (
+            <div
+              className="buttonsContainer absolute top-[6rem] right-5 bg-[#001AA1] border border-gray-200 shadow-md rounded-md p-2 h-[120px] w-[240px] flex flex-col justify-center gap-2 z-[5000]"
+              ref={buttonsContainerRef}
+            >
+              <div
+                className="block w-full py-1 px-2 text-left  text-[#FFFFFF] text-lg hover:bg-gray-100 hover:text-[#000000] font-semibold duration-200 rounded-sm cursor-pointer"
+              >
+                Edit Profile
+              </div>
+              <div
+                className="block w-full py-1 px-2 text-left text-[#FFFFFF] text-lg hover:bg-gray-100 hover:text-[#000000] font-semibold duration-200 rounded-sm cursor-pointer"
+                
+              >
+                Logout
+              </div>
+            </div>
+          )}
           </div>
         </div>
       </header>

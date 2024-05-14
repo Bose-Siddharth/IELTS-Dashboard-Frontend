@@ -33,7 +33,7 @@ const Dashboards = () => {
         onClick={() => setOpen(!open)}
       />
       <div className="flex flex-col w-[100%] overflow-hidden">
-        <Header Heading={'Dashboard'} isOpen={open}/>
+        <Header Heading={'Faculty'} isOpen={open}/>
         <hr/>
         <Faculty_List isOpen={open}/>
       </div>

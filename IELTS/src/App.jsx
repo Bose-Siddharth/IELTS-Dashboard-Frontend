@@ -17,9 +17,6 @@ function App() {
    <Route path='/Dashboard' element={<Dashboards/>} />
    <Route path='/faculty' element={<Facultys/>} />
    </Routes>
-
-    
- 
     </>
   )
 }

@@ -27,7 +27,7 @@ const Dashboard = ({isOpen}) => {
     const radius3 = [0, 0, 8, 8];
     const percentage = 66;
   return (
-    <div className={`h- w-full  pt-2 pl-8 ${!isOpen && 'pl-[68px]'} sm:pl-12 `}>
+    <div className={`h- w-full  pt-2 pl-8 ${!isOpen && 'pl-[52px]'}`}>
      <div className='w-[auto] flex flex-col  '> 
      <div className='md:flex  sm:grid pt-5 justify-between'>
 
