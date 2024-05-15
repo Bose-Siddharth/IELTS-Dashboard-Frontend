@@ -70,7 +70,6 @@ export default function Header({Heading,isOpen}) {
               <div className="header__user-profile-info-spinner-circle"></div>
             </div>
             <p className="header__user-profile-info-status">
-              {/* <span className="header__user-profile-info-status-online">Online</span> */}
             </p>
           </div>
           <div>
